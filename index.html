@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hussnain Raza - Web Developer & Laravel Specialist Portfolio">
+    <meta name="keywords" content="Hussnain Raza, Web Developer, Laravel, PHP, JavaScript, Portfolio">
+    <title>Hussnain Raza | Web Developer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo"><span>&lt;</span>HR<span>/&gt;</span></div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="bracket">&lt;</span>HR<span class="bracket">/&gt;</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home"     class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about"    class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills"   class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact"  class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <!-- Language Dropdown -->
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="lang-btn" id="langBtn" aria-label="Select language">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLangLabel">EN</span>
+                        <i class="fas fa-chevron-down lang-chevron"></i>
+                    </button>
+                    <ul class="lang-menu" id="langMenu">
+                        <li class="lang-item active" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span>English</span>
+                        </li>
+                        <li class="lang-item" data-lang="ur">
+                            <span class="lang-flag">🇵🇰</span>
+                            <span>اردو</span>
+                        </li>
+                        <li class="lang-item" data-lang="zh">
+                            <span class="lang-flag">🇨🇳</span>
+                            <span>中文</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!-- Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Hussnain<br><span class="gradient-text">Raza</span></h1>
+                    <div class="hero-role">
+                        <span data-i18n="hero.rolePrefix">I'm a </span><span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+                    </div>
+                    <p class="hero-desc" data-i18n="hero.desc">Passionate web developer crafting modern, responsive &amp; interactive web experiences with cutting-edge technologies.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">
+                            <span data-i18n="hero.viewWork">View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span data-i18n="hero.contactBtn">Contact Me</span>
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/HussnainRaza163" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hussnain-raza-5233bb36b" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/1EJjPzfneV/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title">developer.php</span>
+                        </div>
+                        <div class="code-body">
+                            <div class="code-line"><span class="c-keyword">class</span> <span class="c-class">Developer</span> <span class="c-punc">{</span></div>
+                            <div class="code-line pl-1"><span class="c-keyword">public</span> <span class="c-var">$name</span> <span class="c-punc">=</span> <span class="c-str">"Hussnain Raza"</span><span class="c-punc">;</span></div>
+                            <div class="code-line pl-1"><span class="c-keyword">public</span> <span class="c-var">$role</span> <span class="c-punc">=</span> <span class="c-str">"Web Developer"</span><span class="c-punc">;</span></div>
+                            <div class="code-line pl-1"><span class="c-keyword">public</span> <span class="c-var">$skills</span> <span class="c-punc">= [</span></div>
+                            <div class="code-line pl-2"><span class="c-str">"Laravel"</span><span class="c-punc">,</span> <span class="c-str">"PHP"</span><span class="c-punc">,</span></div>
+                            <div class="code-line pl-2"><span class="c-str">"JavaScript"</span><span class="c-punc">,</span> <span class="c-str">"GSAP"</span><span class="c-punc">,</span></div>
+                            <div class="code-line pl-2"><span class="c-str">"Bootstrap"</span><span class="c-punc">,</span> <span class="c-str">"CSS3"</span></div>
+                            <div class="code-line pl-1"><span class="c-punc">];</span></div>
+                            <div class="code-line pl-1"><span class="c-keyword">public function</span> <span class="c-func">passion</span><span class="c-punc">() {</span></div>
+                            <div class="code-line pl-2"><span class="c-keyword">return</span> <span class="c-str">"Building Amazing Apps 🚀"</span><span class="c-punc">;</span></div>
+                            <div class="code-line pl-1"><span class="c-punc">}</span></div>
+                            <div class="code-line"><span class="c-punc">}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <div class="mouse"><div class="wheel"></div></div>
+        </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about.tag">Get To Know</span>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-sub" data-i18n="about.subtitle">Web Developer &amp; Laravel Specialist</h3>
+                    <p data-i18n="about.desc1">I'm Hussnain Raza, a passionate and dedicated web developer with expertise in building modern, responsive, and dynamic web applications. I specialize in both frontend and backend development.</p>
+                    <p data-i18n="about.desc2">From crafting pixel-perfect UIs with HTML, CSS, and JavaScript to building robust backend systems with PHP and Laravel — I love turning ideas into reality through clean, efficient code.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="5">0</span><sup>+</sup>
+                            <p data-i18n="about.statProjects">Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="7">0</span><sup>+</sup>
+                            <p data-i18n="about.statTech">Technologies</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="100">0</span><sup>%</sup>
+                            <p data-i18n="about.statCommit">Commitment</p>
+                        </div>
+                    </div>
+
+                    <a href="img/Hussnain_Raza_Resume (1).docx" class="btn btn-primary" download="Hussnain_Raza_Resume.docx">
+                        <i class="fas fa-download"></i>
+                        <span data-i18n="about.downloadCV">Download CV</span>
+                    </a>
+                </div>
+
+                <div class="about-image-wrap">
+                    <div class="about-img-card">
+                        <div class="photo-wrapper">
+                            <img src="img/WhatsApp Image 2026-06-14 at 12.49.38 PM.jpeg" alt="Hussnain Raza" class="profile-photo"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="avatar-placeholder" style="display:none;">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                        </div>
+                        <div class="img-border-ring"></div>
+                    </div>
+                    <div class="exp-badge">
+                        <span class="exp-num">1+</span>
+                        <span class="exp-label" data-i18n="about.years">Years<br>Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="skills.tag">What I Know</span>
+                <h2 class="section-title" data-i18n="skills.title">My Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>HTML5</h4><span>95%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>CSS3</h4><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>JavaScript</h4><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon bootstrap"><i class="fab fa-bootstrap"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>Bootstrap</h4><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon php"><i class="fab fa-php"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>PHP</h4><span>78%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon laravel"><i class="fab fa-laravel"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>Laravel</h4><span>72%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon gsap"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>GSAP</h4><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><h4>Git / GitHub</h4><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="projects.tag">What I've Built</span>
+                <h2 class="section-title" data-i18n="projects.title">My Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Netflix Clone -->
+                <div class="project-card">
+                    <div class="project-img p-netflix">
+                        <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=700&h=420&fit=crop&q=80" alt="Netflix Clone" class="project-screenshot" onerror="this.style.display='none'">
+                        <i class="fab fa-youtube project-icon"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="p-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="p-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span>
+                        </div>
+                        <h3 data-i18n="projects.netflix.title">Netflix Clone</h3>
+                        <p data-i18n="projects.netflix.desc">A pixel-perfect responsive clone of Netflix's streaming interface with dynamic content, smooth hover effects, and modern UI design.</p>
+                    </div>
+                </div>
+
+                <!-- SkillVerse Clone -->
+                <div class="project-card">
+                    <div class="project-img p-skillverse">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&h=420&fit=crop&q=80" alt="SkillVerse Clone" class="project-screenshot" onerror="this.style.display='none'">
+                        <i class="fas fa-graduation-cap project-icon"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="p-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="p-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Bootstrap</span>
+                        </div>
+                        <h3 data-i18n="projects.skillverse.title">SkillVerse Institute Clone</h3>
+                        <p data-i18n="projects.skillverse.desc">A full-featured educational institute website clone with course listings, enrollment forms, and fully responsive design across all devices.</p>
+                    </div>
+                </div>
+
+                <!-- Charity Website -->
+                <div class="project-card">
+                    <div class="project-img p-charity">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=700&h=420&fit=crop&q=80" alt="Charity Website" class="project-screenshot" onerror="this.style.display='none'">
+                        <i class="fas fa-hand-holding-heart project-icon"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="p-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="p-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span>
+                        </div>
+                        <h3 data-i18n="projects.charity.title">Charity Website</h3>
+                        <p data-i18n="projects.charity.desc">A compassionate charity platform designed to inspire donations, showcase causes, and connect volunteers with meaningful opportunities worldwide.</p>
+                    </div>
+                </div>
+
+                <!-- Building Project - Laravel (Featured) -->
+                <div class="project-card featured">
+                    <div class="feat-badge" data-i18n="projects.featuredBadge">Featured</div>
+                    <div class="project-img p-building">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&h=420&fit=crop&q=80" alt="Building Project" class="project-screenshot" onerror="this.style.display='none'">
+                        <i class="fas fa-building project-icon"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="p-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="p-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="ptag laravel-tag">Laravel</span><span class="ptag">PHP</span><span class="ptag">MySQL</span>
+                        </div>
+                        <h3 data-i18n="projects.building.title">Building Project (Laravel)</h3>
+                        <p data-i18n="projects.building.desc">A comprehensive building &amp; property management system featuring tenant management, rent tracking, payment history, and detailed reporting dashboards.</p>
+                    </div>
+                </div>
+
+                <!-- Plaza Management System (Featured) -->
+                <div class="project-card featured">
+                    <div class="feat-badge" data-i18n="projects.featuredBadge">Featured</div>
+                    <div class="project-img p-plaza">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=700&h=420&fit=crop&q=80" alt="Plaza Management" class="project-screenshot" onerror="this.style.display='none'">
+                        <i class="fas fa-store project-icon"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="p-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="p-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="ptag laravel-tag">Laravel</span><span class="ptag">PHP</span><span class="ptag">Bootstrap</span>
+                        </div>
+                        <h3 data-i18n="projects.plaza.title">Plaza Management System</h3>
+                        <p data-i18n="projects.plaza.desc">A full-stack plaza management system with shop allocation, billing management, visitor tracking, and an admin dashboard — built with Laravel MVC architecture.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact.tag">Get In Touch</span>
+                <h2 class="section-title" data-i18n="contact.title">Contact Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-i18n="contact.letsWork">Let's Work Together</h3>
+                    <p data-i18n="contact.desc">Have a project in mind or want to collaborate? Feel free to reach out — I'm always open to discussing new opportunities.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ci-detail">
+                                <span data-i18n="contact.emailLabel">Email</span>
+                                <a href="mailto:hussnainrazajaat163@gmail.com">hussnainrazajaat163@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ci-detail">
+                                <span data-i18n="contact.locationLabel">Location</span>
+                                <p>Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="ci-icon"><i class="fab fa-github"></i></div>
+                            <div class="ci-detail">
+                                <span>GitHub</span>
+                                <a href="https://github.com/HussnainRaza163" target="_blank">github.com/HussnainRaza163</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/HussnainRaza163" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hussnain-raza-5233bb36b" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/1EJjPzfneV/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/hussnainrazajaat163@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="fname" name="name" placeholder=" " required>
+                        <label for="fname" data-i18n="contact.namePlaceholder">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="femail" name="email" placeholder=" " required>
+                        <label for="femail" data-i18n="contact.emailPlaceholder">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="fsubject" name="subject" placeholder=" " required>
+                        <label for="fsubject" data-i18n="contact.subjectPlaceholder">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="fmessage" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="fmessage" data-i18n="contact.messagePlaceholder">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span data-i18n="contact.sendBtn">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-i18n="contact.successMsg">Message sent successfully! I'll get back to you soon.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><span class="bracket">&lt;</span>HR<span class="bracket">/&gt;</span></div>
+                <p data-i18n="footer.copy">&copy; 2024 Hussnain Raza. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/HussnainRaza163" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hussnain-raza-5233bb36b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/1EJjPzfneV/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Chat backdrop overlay -->
+    <div class="chat-overlay" id="chatOverlay"></div>
+
+    <!-- ===== CHATBOT ===== -->
+    <div class="chatbot-wrapper" id="chatbotWrapper">
+        <!-- Toggle button -->
+        <button class="chat-toggle" id="chatToggle" aria-label="Open chat assistant">
+            <i class="fas fa-comments" id="chatToggleIcon"></i>
+            <span class="chat-badge" id="chatBadge">1</span>
+        </button>
+
+        <!-- Chat window -->
+        <div class="chat-window" id="chatWindow">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-avatar">HR</div>
+                <div class="chat-header-info">
+                    <h4>HR Assistant</h4>
+                    <span class="chat-status"><i class="fas fa-circle"></i> Online — Ask me anything</span>
+                </div>
+                <button class="chat-close" id="chatClose" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <!-- Quick reply buttons -->
+            <div class="chat-quick-replies" id="chatQuickReplies"></div>
+
+            <!-- Text input (shown only when freeform input is needed) -->
+            <div class="chat-input-area" id="chatInputArea">
+                <input type="text" id="chatInput" placeholder="Type here..." autocomplete="off">
+                <button class="chat-send" id="chatSend" aria-label="Send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <!-- Leave chat bar -->
+            <div class="chat-leave-bar">
+                <button class="chat-new-btn" id="chatNewBtn">
+                    <i class="fas fa-rotate-right"></i> New Chat
+                </button>
+                <button class="chat-leave-btn" id="chatLeaveBtn">
+                    <i class="fas fa-sign-out-alt"></i> Leave Chat
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+    <!-- Chatbot -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

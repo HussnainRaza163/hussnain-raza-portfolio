@@ -1296,14 +1296,14 @@ input, textarea { font-family: inherit; outline: none; }
 /* ── 600px: hide code window, phones take over ── */
 @media (max-width: 600px) {
     .hero-visual { display: none; }
-    .hero { min-height: auto; padding: 90px 0 50px; }
+    .hero { padding: 90px 0 50px; }
 }
 
 /* ── 480px: small phones ── */
 @media (max-width: 480px) {
-    /* Preloader — hide the duplicate logo text, show only the bar */
-    .preloader-logo { display: none; }
-    .preloader-bar  { margin-top: 0; width: 160px; }
+    /* Preloader — smaller logo so it doesn't dominate */
+    .preloader-logo { font-size: 1.6rem; }
+    .preloader-bar  { width: 150px; }
 
     .section { padding: 58px 0; }
     .container { padding: 0 14px; }

@@ -226,11 +226,14 @@ function initHeroAnimations() {
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
-        // On mobile: skip entrance animations entirely — content shows immediately.
-        // Preloader already provides the loading experience.
-        gsap.to('.orb-1', {
-            scrollTrigger: { trigger: '.hero', scrub: 1 },
-            y: -50, ease: 'none'
+        // Force all hero text elements visible — skip entrance animations on mobile.
+        // Without this, any GSAP `from()` leftover state could leave them at opacity:0.
+        ['.hero-greeting', '.hero-name', '.hero-role', '.hero-desc',
+         '.hero-btns', '.hero-socials', '.scroll-down'].forEach(sel => {
+            document.querySelectorAll(sel).forEach(el => {
+                el.style.opacity  = '1';
+                el.style.transform = 'none';
+            });
         });
         return;
     }

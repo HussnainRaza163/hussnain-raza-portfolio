@@ -7,8 +7,9 @@
     <meta name="keywords" content="Hussnain Raza, Web Developer, Laravel, PHP, JavaScript, Portfolio">
     <title>Hussnain Raza | Web Developer</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fontshare — General Sans (PolySans alternative) + Fira Code for code elements -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -21,7 +22,7 @@
     <!-- ===== PRELOADER ===== -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
-            <div class="preloader-logo"><span>&lt;</span>HR<span>/&gt;</span></div>
+            <div class="preloader-logo"><span>&lt;</span>HUSSNAIN R<span>/&gt;</span></div>
             <div class="preloader-bar"><div class="preloader-fill"></div></div>
         </div>
     </div>
@@ -30,41 +31,19 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <span class="bracket">&lt;</span>HR<span class="bracket">/&gt;</span>
+                <span class="bracket">&lt;</span>HUSSNAIN R<span class="bracket">/&gt;</span>
             </a>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home"     class="nav-link" data-i18n="nav.home">Home</a></li>
-                <li><a href="#about"    class="nav-link" data-i18n="nav.about">About</a></li>
-                <li><a href="#skills"   class="nav-link" data-i18n="nav.skills">Skills</a></li>
-                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
-                <li><a href="#contact"  class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="#home"     class="nav-link" data-i18n="nav.home"><i class="fas fa-house"></i><span>Home</span></a></li>
+                <li><a href="#about"    class="nav-link" data-i18n="nav.about"><i class="fas fa-user-tie"></i><span>About</span></a></li>
+                <li><a href="#skills"   class="nav-link" data-i18n="nav.skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects"><i class="fas fa-folder-open"></i><span>Projects</span></a></li>
+                <li><a href="#contact"  class="nav-link" data-i18n="nav.contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
             </ul>
 
             <div class="nav-controls">
                 <!-- Language Dropdown -->
-                <div class="lang-dropdown" id="langDropdown">
-                    <button class="lang-btn" id="langBtn" aria-label="Select language">
-                        <i class="fas fa-globe"></i>
-                        <span id="currentLangLabel">EN</span>
-                        <i class="fas fa-chevron-down lang-chevron"></i>
-                    </button>
-                    <ul class="lang-menu" id="langMenu">
-                        <li class="lang-item active" data-lang="en">
-                            <span class="lang-flag">🇬🇧</span>
-                            <span>English</span>
-                        </li>
-                        <li class="lang-item" data-lang="ur">
-                            <span class="lang-flag">🇵🇰</span>
-                            <span>اردو</span>
-                        </li>
-                        <li class="lang-item" data-lang="zh">
-                            <span class="lang-flag">🇨🇳</span>
-                            <span>中文</span>
-                        </li>
-                    </ul>
-                </div>
-
                 <!-- Theme Toggle -->
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon" id="themeIcon"></i>
@@ -106,7 +85,6 @@
                     <div class="hero-socials">
                         <a href="https://github.com/HussnainRaza163" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/hussnain-raza-5233bb36b" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/share/1EJjPzfneV/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
@@ -426,11 +404,10 @@
                     <div class="contact-socials">
                         <a href="https://github.com/HussnainRaza163" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/hussnain-raza-5233bb36b" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/share/1EJjPzfneV/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" action="https://formspree.io/hussnainrazajaat163@gmail.com" method="POST">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xbdeeroo" method="POST">
                     <div class="form-group">
                         <input type="text" id="fname" name="name" placeholder=" " required>
                         <label for="fname" data-i18n="contact.namePlaceholder">Your Name</label>
@@ -464,12 +441,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo"><span class="bracket">&lt;</span>HR<span class="bracket">/&gt;</span></div>
+                <div class="footer-logo"><span class="bracket">&lt;</span>HUSSNAIN R<span class="bracket">/&gt;</span></div>
                 <p data-i18n="footer.copy">&copy; 2024 Hussnain Raza. All Rights Reserved.</p>
                 <div class="footer-socials">
                     <a href="https://github.com/HussnainRaza163" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/hussnain-raza-5233bb36b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.facebook.com/share/1EJjPzfneV/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </div>

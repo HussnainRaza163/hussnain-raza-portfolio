@@ -4,7 +4,7 @@
 
 (function () {
 
-    const FORMSPREE_URL = 'https://formspree.io/hussnainrazajaat163@gmail.com';
+    const FORMSPREE_URL = 'https://formspree.io/f/xbdeeroo';
 
     // ===== STATE =====
     let chatState = 'idle';   // current conversation step
@@ -288,22 +288,27 @@
         clearReplies();
         botSay("Sending your details to Hussnain... ⏳");
 
-        const body = new FormData();
-        body.append('_subject', `New Project Inquiry — ${client.name}`);
-        body.append('Client Name',    client.name);
-        body.append('Client Email',   client.email);
-        body.append('Client Phone',   client.phone || 'Not provided');
-        body.append('Project Type',   client.projectType  || 'Not specified');
-        body.append('Technology',     client.technology   || 'Not specified');
-        body.append('Budget',         client.budget       || 'Not specified');
-        body.append('Description',    client.description);
-        body.append('Source',         'Portfolio Chatbot');
+        // Use JSON for better reliability with Formspree AJAX
+        const data = {
+            email: client.email,
+            name: client.name,
+            phone: client.phone || 'Not provided',
+            project_type: client.projectType || 'Not specified',
+            tech: client.technology || 'Not specified',
+            budget: client.budget || 'Not specified',
+            message: client.description,
+            _subject: `New Project Inquiry — ${client.name}`,
+            _source: 'Portfolio Chatbot'
+        };
 
         try {
             const res = await fetch(FORMSPREE_URL, {
                 method:  'POST',
-                body,
-                headers: { 'Accept': 'application/json' }
+                body: JSON.stringify(data),
+                headers: { 
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                }
             });
 
             if (res.ok) {

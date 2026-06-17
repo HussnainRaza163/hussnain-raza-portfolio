@@ -247,7 +247,7 @@ function initHeroAnimations() {
       .from('.hero-btns',     { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.25')
       .from('.hero-socials',  { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.25')
       .from('.code-window',   { opacity: 0, x: 60, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-      .from('.scroll-down',   { opacity: 0, duration: 0.5 }, '-=0.2');
+      ;
 
     // Orb parallax (desktop only — mobile is slower, skip for performance)
     gsap.to('.orb-1', {

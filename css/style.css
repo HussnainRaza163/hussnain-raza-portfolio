@@ -555,38 +555,6 @@ input, textarea { font-family: inherit; outline: none; }
 .c-str     { color: #98c379; }
 .c-punc    { color: #abb2bf; }
 
-/* Scroll indicator */
-.scroll-down {
-    position: absolute;
-    bottom: 36px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    opacity: 0.6;
-    transition: var(--transition);
-}
-.scroll-down:hover { opacity: 1; }
-.mouse {
-    width: 26px; height: 40px;
-    border: 2px solid var(--text-secondary);
-    border-radius: 13px;
-    display: flex;
-    justify-content: center;
-    padding-top: 6px;
-}
-.wheel {
-    width: 4px; height: 8px;
-    background: var(--accent);
-    border-radius: 2px;
-    animation: scrollAnim 1.8s ease-in-out infinite;
-}
-@keyframes scrollAnim {
-    0%   { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(14px); }
-}
 
 /* ===== ABOUT ===== */
 .about { background: var(--bg-secondary); }
@@ -1253,8 +1221,6 @@ input, textarea { font-family: inherit; outline: none; }
     .nav-link i { opacity: 1; transform: none; }
     .hamburger { display: flex; }
 
-    /* Hide scroll-down indicator on mobile */
-    .scroll-down { display: none !important; }
 
     /* Fix horizontal scroll from reveal animations */
     .reveal-left  { transform: translateY(30px); }

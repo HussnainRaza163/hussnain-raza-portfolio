@@ -1296,6 +1296,7 @@ input, textarea { font-family: inherit; outline: none; }
 /* ── 600px: hide code window, phones take over ── */
 @media (max-width: 600px) {
     .hero-visual { display: none; }
+    .scroll-down  { display: none; }
     .hero { padding: 90px 0 50px; }
 }
 

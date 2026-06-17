@@ -1253,6 +1253,9 @@ input, textarea { font-family: inherit; outline: none; }
     .nav-link i { opacity: 1; transform: none; }
     .hamburger { display: flex; }
 
+    /* Hide scroll-down indicator on mobile */
+    .scroll-down { display: none !important; }
+
     /* Fix horizontal scroll from reveal animations */
     .reveal-left  { transform: translateY(30px); }
     .reveal-right { transform: translateY(30px); }
@@ -1296,7 +1299,6 @@ input, textarea { font-family: inherit; outline: none; }
 /* ── 600px: hide code window, phones take over ── */
 @media (max-width: 600px) {
     .hero-visual { display: none; }
-    .scroll-down  { display: none; }
     .hero { padding: 90px 0 50px; }
 }
 

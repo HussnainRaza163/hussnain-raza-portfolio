@@ -229,7 +229,7 @@ function initHeroAnimations() {
         // Force all hero text elements visible — skip entrance animations on mobile.
         // Without this, any GSAP `from()` leftover state could leave them at opacity:0.
         ['.hero-greeting', '.hero-name', '.hero-role', '.hero-desc',
-         '.hero-btns', '.hero-socials', '.scroll-down'].forEach(sel => {
+         '.hero-btns', '.hero-socials'].forEach(sel => {
             document.querySelectorAll(sel).forEach(el => {
                 el.style.opacity  = '1';
                 el.style.transform = 'none';

@@ -223,7 +223,19 @@ function initHeroAnimations() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero entrance
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+        // On mobile: skip entrance animations entirely — content shows immediately.
+        // Preloader already provides the loading experience.
+        gsap.to('.orb-1', {
+            scrollTrigger: { trigger: '.hero', scrub: 1 },
+            y: -50, ease: 'none'
+        });
+        return;
+    }
+
+    // Desktop hero entrance
     const tl = gsap.timeline({ delay: 0.2 });
     tl.from('.hero-greeting', { opacity: 0, y: 30, duration: 0.6, ease: 'power3.out' })
       .from('.hero-name',     { opacity: 0, y: 30, duration: 0.6, ease: 'power3.out' }, '-=0.35')
@@ -231,10 +243,10 @@ function initHeroAnimations() {
       .from('.hero-desc',     { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.3')
       .from('.hero-btns',     { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.25')
       .from('.hero-socials',  { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.25')
-      .from('.code-window',   { opacity: 0, x: 80, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+      .from('.code-window',   { opacity: 0, x: 60, duration: 0.8, ease: 'power3.out' }, '-=0.6')
       .from('.scroll-down',   { opacity: 0, duration: 0.5 }, '-=0.2');
 
-    // Orb parallax
+    // Orb parallax (desktop only — mobile is slower, skip for performance)
     gsap.to('.orb-1', {
         scrollTrigger: { trigger: '.hero', scrub: 1 },
         y: -100, ease: 'none'

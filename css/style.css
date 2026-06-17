@@ -1208,6 +1208,13 @@ input, textarea { font-family: inherit; outline: none; }
     .section-header { margin-bottom: 46px; }
     .section-title { font-size: 2rem; }
 
+    /* Navbar — consistent height, no jump on scroll */
+    .navbar { padding: 14px 0; }
+    .nav-container { gap: 10px; }
+    .nav-logo { font-size: 1.1rem; white-space: nowrap; }
+    .nav-controls { gap: 8px; flex-shrink: 0; }
+    .theme-toggle { width: 36px; height: 36px; font-size: 0.9rem; }
+
     /* Navbar — full-screen slide-down panel */
     .nav-menu {
         position: fixed;
@@ -1216,7 +1223,7 @@ input, textarea { font-family: inherit; outline: none; }
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
         flex-direction: column;
-        padding: 74px 20px 28px;
+        padding: 66px 20px 28px;
         gap: 4px;
         border-bottom: 1px solid rgba(37, 99, 235, 0.28);
         transform: translateY(-100%);
@@ -1245,6 +1252,12 @@ input, textarea { font-family: inherit; outline: none; }
     }
     .nav-link i { opacity: 1; transform: none; }
     .hamburger { display: flex; }
+
+    /* Fix horizontal scroll from reveal animations */
+    .reveal-left  { transform: translateY(30px); }
+    .reveal-right { transform: translateY(30px); }
+    .reveal-left.visible  { opacity: 1; transform: translateY(0); }
+    .reveal-right.visible { opacity: 1; transform: translateY(0); }
 
     /* Hero */
     .hero-name { font-size: 2.4rem; }
@@ -1288,6 +1301,10 @@ input, textarea { font-family: inherit; outline: none; }
 
 /* ── 480px: small phones ── */
 @media (max-width: 480px) {
+    /* Preloader — hide the duplicate logo text, show only the bar */
+    .preloader-logo { display: none; }
+    .preloader-bar  { margin-top: 0; width: 160px; }
+
     .section { padding: 58px 0; }
     .container { padding: 0 14px; }
     .section-header { margin-bottom: 34px; }
